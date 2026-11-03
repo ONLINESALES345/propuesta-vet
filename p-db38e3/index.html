@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Huellitas y Garritas</title>
+<meta name="theme-color" content="#be185d">
+<style>
+:root{--blue:#be185d;--navy:#5a1038;--ink:#111827;--mut:#5b6478;--line:#e4e8f2;--soft:#fdf0f6;--ok:#1f9d55;--bad:#d64545}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.5;padding-bottom:84px;-webkit-text-size-adjust:100%}
+a{color:inherit;text-decoration:none}
+.bar{background:var(--navy);color:#fff;font-size:13px;text-align:center;padding:9px 16px;font-weight:600}
+.bar b{color:#ffffff;white-space:nowrap}
+nav{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;position:sticky;top:0;background:#fffe;backdrop-filter:blur(8px);z-index:20;border-bottom:1px solid var(--line)}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.02em}
+.cross{flex:none;width:34px;height:34px;border-radius:9px;background:var(--blue);position:relative}
+.cross:before,.cross:after{content:"";position:absolute;background:#fff;border-radius:2px}
+.cross:before{left:14px;top:7px;width:6px;height:20px}.cross:after{left:7px;top:14px;width:20px;height:6px}
+.logo small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:200px;display:block;font-weight:600;color:var(--mut);font-size:11px;letter-spacing:.04em;margin-top:-2px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;border-radius:999px;padding:13px 22px;font-size:16px;border:2px solid var(--blue)}
+.btn.p{background:var(--blue);color:#fff}
+.btn.s{background:#fff;color:var(--blue)}
+nav .btn{padding:9px 16px;font-size:14px}
+.hero{position:relative;color:#fff;background:linear-gradient(160deg,#5a1038,#be185d);padding:46px 20px 40px}
+.pill{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--ink);font-size:13px;font-weight:700;border-radius:999px;padding:7px 14px}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--bad)}
+.pill.open .dot{background:var(--ok)}
+h1{font-size:40px;line-height:1.05;letter-spacing:-.02em;margin:18px 0 12px;font-weight:800}
+.hero p{font-size:17px;max-width:30ch;color:#f0f3ff}
+.row{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.hero .btn.s{background:transparent;color:#fff;border-color:#fff}
+.hero .btn.p{background:#fff;color:var(--blue);border-color:#fff}
+.rate{display:flex;align-items:center;gap:10px;margin-top:26px;font-size:15px;color:#f0f3ff}
+.rate b{font-size:28px;color:#fff;letter-spacing:-.02em}
+.stars{color:#ffc933;letter-spacing:2px}
+section{padding:44px 20px}
+h2{font-size:28px;letter-spacing:-.02em;line-height:1.1;margin-bottom:8px}
+.sub{color:var(--mut);margin-bottom:22px}
+.grid{display:grid;gap:12px}
+.svc{display:flex;gap:14px;align-items:center;background:var(--soft);border-radius:16px;padding:16px 18px;font-weight:700}
+.svc i{flex:none;width:40px;height:40px;border-radius:12px;background:var(--blue);display:grid;place-items:center;color:#fff;font-style:normal;font-size:18px}
+.rev{border:1px solid var(--line);border-radius:18px;padding:18px}
+.rev p{font-size:16px;margin:6px 0 8px}
+.rev .src{color:var(--mut);font-size:13px}
+.hours{width:100%;border-collapse:collapse}
+.hours td{padding:12px 0;border-bottom:1px solid var(--line);font-size:16px}
+.hours td:last-child{text-align:right;font-weight:700}
+.hours tr.today td{color:var(--blue)}
+.map{background:var(--navy);color:#fff;border-radius:22px;padding:24px 20px}
+.map p{color:#e6ebff;margin:6px 0 18px}
+.map .btn{background:#fff;color:var(--blue);border-color:#fff}
+.note{font-size:12px;color:var(--mut);text-align:center;padding:22px 20px 8px}
+footer{background:var(--navy);color:#e6ebff;font-size:13px;text-align:center;padding:20px 20px}
+.fab{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:#fffef;background:#ffffffee;backdrop-filter:blur(8px);border-top:1px solid var(--line);display:flex;gap:10px}
+.fab .btn{flex:1;padding:14px 10px}
+</style>
+</head>
+<body>
+<div class="bar" id="bar">Huellitas y Garritas · <b>222 326 4170</b></div>
+<nav><a class="logo" href="#top"><span class="cross"></span><span>Huellitas y Garritas<small>Av. 4 Poniente 705, local A, San Juan Calvario, San Pedro Cholula</small></span></a><a class="btn p" href="tel:2223264170">Llamar</a></nav>
+<header class="hero" id="top">
+  <span class="pill" id="st"><span class="dot"></span><span id="stt">Horario</span></span>
+  <h1>Veterinaria Huellitas y Garritas</h1>
+  <p>Consultorio veterinario con trato cercano.</p>
+  <div class="row"><a class="btn p" href="tel:2223264170">Llamar ahora</a><a class="btn s" href="https://www.google.com/maps/search/?api=1&amp;query=Veterinaria+Huellitas+y+Garritas+Av+4+Poniente+705+San+Pedro+Cholula" target="_blank" rel="noopener">Cómo llegar</a></div>
+  <div class="rate"><b>4.9</b><span><span class="stars">★★★★★</span><br>52 reseñas en Google</span></div>
+</header>
+<section><h2>Qué hacemos por tu mascota</h2><p class="sub">Atención para perros y gatos.</p>
+  <div class="grid"><div class="svc"><i>+</i>Consultorio veterinario</div><div class="svc"><i>+</i>Precios accesibles</div><div class="svc"><i>+</i>Atención de la doctora</div></div>
+  <div class="row"><a class="btn p" href="tel:2223264170">Agendar por teléfono</a></div>
+</section>
+<section style="background:var(--soft)"><h2>Lo que dicen sus dueños</h2><p class="sub">Reseñas de Google.</p>
+  <div class="grid"><div class="rev"><span class="stars">★★★★★</span><p>“Muy buena atención de parte de la doctora y maneja precios muy accesibles.”</p><span class="src">Reseña en Google</span></div></div>
+</section>
+<section><h2>Horario</h2><p class="sub">Confirma por teléfono antes de venir.</p>
+  <table class="hours" id="hrs"><tr><td>Entre semana</td><td>11:30 a 19:00</td></tr><tr><td>Sábado y domingo</td><td>Consultar por teléfono</td></tr></table>
+</section>
+<section style="padding-top:8px"><div class="map"><h2>Cómo llegar</h2><p>Av. 4 Poniente 705, local A, San Juan Calvario, San Pedro Cholula.</p><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Veterinaria+Huellitas+y+Garritas+Av+4+Poniente+705+San+Pedro+Cholula" target="_blank" rel="noopener">Abrir en Google Maps</a></div></section>
+<p class="note">Propuesta de diseño para Huellitas y Garritas. No es el sitio oficial. Horarios tomados de Google, por confirmar.</p>
+<footer>Veterinaria Huellitas y Garritas · 222 326 4170</footer>
+<div class="fab"><a class="btn s" href="https://www.google.com/maps/search/?api=1&amp;query=Veterinaria+Huellitas+y+Garritas+Av+4+Poniente+705+San+Pedro+Cholula" target="_blank" rel="noopener">Cómo llegar</a><a class="btn p" href="tel:2223264170">Llamar</a></div>
+<script>
+(function(){
+ var H=[[0, null], [1, [11.5, 19]], [2, [11.5, 19]], [3, [11.5, 19]], [4, [11.5, 19]], [5, [11.5, 19]], [6, null]], HH={};H.forEach(function(x){HH[x[0]]=x[1]});
+ function now(){var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/Mexico_City',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date()),o={};p.forEach(function(x){o[x.type]=x.value});
+  return {d:{Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[o.weekday],m:(+o.hour%24)*60+(+o.minute)}}
+ function fmt(h){if(h>=24)return 'medianoche';var hr=Math.floor(h),mn=Math.round((h-hr)*60),ap=hr>=12?'p. m.':'a. m.',h12=hr>12?hr-12:(hr===0?12:hr);return h12+':'+(mn<10?'0'+mn:mn)+' '+ap}
+ function upd(){var n=now(),h=HH[n.d],open=h&&n.m>=h[0]*60&&n.m<h[1]*60,st=document.getElementById('st'),t=document.getElementById('stt'),bar=document.getElementById('bar'),tel='222 326 4170';
+  st.className='pill'+(open?' open':'');
+  if(open&&h[1]-h[0]>=24){t.textContent='Abierto las 24 horas';bar.innerHTML='Abierto las 24 horas · Llama al <b>'+tel+'</b>'}
+  else if(open){t.textContent='Abierto · cierra a las '+fmt(h[1]);bar.innerHTML='Abierto hoy hasta las <b>'+fmt(h[1])+'</b> · Llama al <b>'+tel+'</b>'}
+  else{var nd=n.d,add=0;if(h&&n.m<h[0]*60){}else{do{nd=(nd+1)%7;add++}while(!HH[nd]&&add<7)}
+   var nh=HH[nd];if(!nh){t.textContent='Cerrado ahora';bar.innerHTML='Llama al <b>'+tel+'</b>';return}
+   var when=add===0?'hoy':(add===1?'mañana':'el '+['domingo','lunes','martes','miércoles','jueves','viernes','sábado'][nd]);
+   t.textContent='Cerrado · abre '+when+' a las '+fmt(nh[0]);bar.innerHTML='Cerrado ahora · abre '+when+' a las <b>'+fmt(nh[0])+'</b>'}}
+ upd();setInterval(upd,60000);
+})();
+</script>
+</body></html>
