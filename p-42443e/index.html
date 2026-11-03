@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Las Rapichelas</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,100..900&family=Archivo+Black&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#fff;--ink:#0d0d0d;--red:#e11d2e;--deep:#0d0d0d;--card:#f5f3f1;--mut:#666}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}
+body{font:16px/1.55 Inter,sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden}
+a{color:inherit}img{max-width:100%}
+h1,h2,h3{font-family:"Archivo","Archivo Black",sans-serif}
+nav{position:fixed;inset:0 0 auto;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:calc(30px + env(safe-area-inset-top,0px)) 5vw 12px;backdrop-filter:blur(14px);background:rgba(255,255,255,.88);border-bottom:1px solid #0d0d0d14}
+nav .lg{display:flex;align-items:center;gap:10px;font:800 16px Archivo,sans-serif;text-decoration:none;white-space:nowrap}
+nav .lg img{width:34px;height:34px;border-radius:50%}
+nav div{display:flex;gap:20px;align-items:center;font-weight:500;font-size:14px}
+.btn{display:inline-block;background:var(--ink);color:#fff;padding:13px 24px;border-radius:99px;text-decoration:none;font-weight:600;border:2px solid var(--ink);transition:.25s;cursor:pointer;font-family:Inter,sans-serif;font-size:16px}
+.btn:hover{transform:translateY(-3px);background:var(--red);border-color:var(--red)}
+.btn.alt{background:transparent;color:var(--ink)}.btn.alt:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+.btn.r{background:var(--red);border-color:var(--red)}.btn.r:hover{background:var(--ink);border-color:var(--ink)}
+.hero{min-height:100vh;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:4vw;padding:calc(138px + env(safe-area-inset-top,0px)) 5vw 60px;background:radial-gradient(circle at 88% 18%,#e11d2e22,transparent 42%),radial-gradient(circle at 8% 92%,#e11d2e14,transparent 40%)}
+.jtb{display:inline-block;font:400 clamp(13px,3.4vw,20px) "Archivo Black",sans-serif;text-transform:uppercase;letter-spacing:.18em;background:var(--red);color:#fff;padding:9px 18px 9px 22px;border-radius:99px;transform:rotate(-3deg);margin-bottom:26px;box-shadow:0 8px 0 var(--ink)}
+.hero h1{font-weight:800;font-stretch:125%;font-variation-settings:"wdth" 125;text-transform:uppercase;letter-spacing:-.035em;line-height:.9;font-size:clamp(34px,6.2vw,110px);overflow-wrap:anywhere;margin-bottom:clamp(28px,5vw,48px)}
+.hero h1 span{color:var(--red)}
+.hero p{max-width:460px;color:var(--mut);margin-bottom:28px;font-size:18px}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.stack{position:relative;height:min(52vh,420px)}
+.stack img{position:absolute;width:48%;border-radius:28px;box-shadow:0 30px 60px #0d0d0d30;object-fit:cover;aspect-ratio:1;cursor:pointer}
+.stack img:nth-child(1){left:0;top:6%;transform:rotate(-7deg)}.stack img:nth-child(2){right:0;top:0;transform:rotate(6deg);z-index:2}.stack img:nth-child(3){left:26%;bottom:0;transform:rotate(-2deg);z-index:3}
+.marquee{background:var(--red);color:#fff;overflow:hidden;white-space:nowrap;padding:14px 0;font:800 22px Archivo,sans-serif;text-transform:uppercase;letter-spacing:.04em}
+.marquee span{display:inline-block;animation:m 26s linear infinite}@keyframes m{to{transform:translateX(-50%)}}
+section{padding:90px 5vw}
+.eyebrow{font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:12px;color:var(--red)}
+h2{font-size:clamp(44px,12vw,150px);line-height:.9;letter-spacing:-.035em;margin:10px 0 34px;font-weight:800;font-stretch:125%;font-variation-settings:"wdth" 125;text-transform:uppercase}
+.tabs{display:flex;gap:6px 30px;flex-wrap:wrap;margin-bottom:30px;position:sticky;top:calc(86px + env(safe-area-inset-top,0px));z-index:10;padding:10px 0;background:var(--bg)}
+.tabs button{border:0;border-bottom:3px solid transparent;background:transparent;color:#a3a3a3;padding:8px 2px;font:400 clamp(18px,4.6vw,26px) "Archivo Black",sans-serif;cursor:pointer}
+.tabs button.on{color:var(--ink);border-bottom-color:var(--red)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px}
+.card{background:var(--card);border-radius:26px;overflow:hidden;display:flex;flex-direction:column;transition:.3s}
+.card:hover{transform:translateY(-8px);box-shadow:0 24px 50px #0d0d0d22}
+.card .im{aspect-ratio:1;overflow:hidden;background:#ebe7e3;cursor:pointer}.card img{width:100%;height:100%;object-fit:cover;transition:.5s}.card:hover img{transform:scale(1.06)}
+.card .tx{padding:18px 20px 22px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card h3{font-size:22px;line-height:1.1;text-transform:uppercase}.card p{font-size:14px;color:var(--mut);flex:1}
+.price{font:800 22px Archivo,sans-serif;color:var(--red);margin-top:6px}
+.hide{display:none}
+.about{background:var(--ink);color:#f2f2f2;border-radius:48px;margin:0 2.5vw}
+.about h2{color:#fff;font-size:clamp(40px,8vw,90px)}.about .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px}
+.about .n{font:800 56px Archivo,sans-serif;color:var(--red);line-height:1}
+.locs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-bottom:40px}
+.loc{background:var(--card);border-radius:28px;padding:26px;display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.loc small{font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--red);font-size:11px}
+.loc h3{font-size:26px;text-transform:uppercase}.loc .btn{margin-top:10px}.loc.main{background:var(--ink);color:#fff}
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.info div{border-bottom:1px solid #0d0d0d22;padding-bottom:14px}
+.info small{display:block;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--red);font-size:11px}
+.info .v{font:600 22px/1.25 Archivo,sans-serif}
+.big{font:800 clamp(50px,15vw,220px)/.85 Archivo,sans-serif;letter-spacing:-.05em;color:var(--ink);padding:0 5vw;white-space:nowrap;overflow:hidden;text-transform:uppercase}
+footer{padding:40px 5vw 70px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-size:14px;color:var(--mut)}
+.demo{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--ink);color:#fff;text-align:center;font-size:12px;padding:8px 16px calc(8px + env(safe-area-inset-bottom,0px))}
+.fab{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(46px + env(safe-area-inset-bottom,0px));z-index:40;box-shadow:0 8px 24px #0d0d0d40;transition:.3s;padding:16px 26px}.fab.off{opacity:0;pointer-events:none;transform:translateY(10px)}
+.st{position:fixed;top:calc(4px + env(safe-area-inset-top,0px));right:max(6px,env(safe-area-inset-right,0px));display:flex;align-items:center;gap:7px;padding:4px 11px 4px 9px;border-radius:99px;background:#fff;color:#0d0d0d;font:600 12px Inter,sans-serif;box-shadow:0 2px 10px #0003;z-index:50}
+.st::before{content:"";width:9px;height:9px;border-radius:50%;background:#e23d3d}.st.on::before{background:#22c55e;animation:stp 2s infinite}@keyframes stp{50%{box-shadow:0 0 0 6px #22c55e44}}
+.ord{position:fixed;inset:0;z-index:100;background:#0009;display:flex;align-items:flex-end;justify-content:center}.ord[hidden]{display:none}
+.sheet{background:#fff;width:100%;max-width:480px;border-radius:28px 28px 0 0;padding:26px 22px calc(26px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:12px}
+.sheet h3{font:800 24px Archivo,sans-serif;text-transform:uppercase}.sheet p{color:var(--mut);font-size:14px}.sheet .btn{text-align:center;padding:16px}
+.sheet .x{background:none;border:0;color:var(--mut);font:600 15px Inter,sans-serif;padding:10px;cursor:pointer}
+@media(max-width:820px){.hero{grid-template-columns:1fr}.hero h1{font-size:10vw}.hero>*{min-width:0}.stack{height:300px}nav div a:not(.btn){display:none}section{padding:64px 5vw}.about{border-radius:30px}nav .btn{padding:10px 16px;font-size:13px;white-space:nowrap}}
+@media(prefers-reduced-motion:reduce){.marquee span,.st.on::before{animation:none}}
+</style></head><body>
+<span id="st" class="st" role="img">Cerrado</span>
+<nav><a class="lg" href="#"><img src="img/logo.png" alt="">Las Rapichelas</a><div><a href="#menu">Menú</a><a href="#visita">Visítanos</a><a class="btn r" href="https://www.rappi.com.mx/restaurantes/1930236478-rapichelas" target="_blank" rel="noopener">Pedir en Rappi</a></div></nav>
+
+<header class="hero">
+ <div>
+  <span class="jtb">Cholula · Puebla</span>
+  <h1>Las<br><span>Rapi</span>chelas</h1>
+  <p>Micheladas, snacks y camarón. Pide a domicilio o pásate por tu rapichela.</p>
+  <div class="row"><a class="btn r" href="#menu">Ver el menú</a><a class="btn alt" href="https://www.rappi.com.mx/restaurantes/1930236478-rapichelas" target="_blank" rel="noopener">Pedir en Rappi</a></div>
+ </div>
+ <div><div class="stack"><img src="img/camaronera.webp" alt="Camaronera"><img src="img/clasica.webp" alt="Clásica"><img src="img/boneless.webp" alt="Boneless"></div>
+ <div class="row" style="margin-top:34px;justify-content:center"><a id="mapin" class="btn" href="https://www.google.com/maps/search/?api=1&query=Las+Rapichelas+Ruta+Quetzalc%C3%B3atl+206+San+Pedro+Cholula" target="_blank" rel="noopener">Abrir en Google Maps</a></div></div>
+</header>
+<div class="marquee"><span>micheladas · alitas · boneless · camaronera · papas locas · micheladas · alitas · boneless · camaronera · papas locas · micheladas · alitas · boneless · camaronera · papas locas · micheladas · alitas · boneless · camaronera · papas locas ·&nbsp;</span></div>
+
+<section id="menu">
+ <div class="eyebrow">el menú</div><h2>menú</h2>
+ <div class="tabs" id="tabs"></div><div class="grid" id="grid"></div>
+ <p style="margin-top:30px;font-size:13px;color:var(--mut)">Precios en MXN tomados de Rappi (sucursal Cholula); pueden variar en tienda. Toca una foto para pedir.</p>
+</section>
+
+<section class="about">
+ <div class="eyebrow">por qué nos piden</div><h2>sabor de barrio,<br>entrega a tu puerta.</h2>
+ <div class="cols">
+  <div><div class="n">4.2★</div><p>calificación en Google, más de 200 reseñas</p></div>
+  <div><div class="n">3</div><p>sucursales: Cholula, Sonata y VIP Angelópolis</p></div>
+  <div><div class="n">10:30</div><p>abrimos todos los días hasta las 22:15</p></div>
+ </div>
+</section>
+
+<section id="visita">
+ <div class="eyebrow">visítanos</div><h2>ven por<br>tu rapichela.</h2>
+ <div class="locs">
+  <div class="loc main"><small style="color:#ff6b78">Cholula · Rappi</small><h3>Ruta Quetzalcóatl 206</h3><span>Los Gallos, 72810 San Pedro Cholula, Pue.</span><a class="btn r" href="https://www.google.com/maps/search/?api=1&query=Las+Rapichelas+Ruta+Quetzalc%C3%B3atl+206+San+Pedro+Cholula" target="_blank" rel="noopener">Cómo llegar</a></div>
+  <div class="loc"><small>Sucursal</small><h3>Sonata</h3><span>Puebla, Pue.</span><a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=Las+Rapichelas+Sonata+Puebla" target="_blank" rel="noopener">Ver en Maps</a></div>
+  <div class="loc"><small>Sucursal</small><h3>VIP Angelópolis</h3><span>Puebla, Pue.</span><a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=Las+Rapichelas+VIP+Angelopolis+Puebla" target="_blank" rel="noopener">Ver en Maps</a></div>
+ </div>
+ <div class="info">
+  <div><small>Horario (Cholula)</small><span class="v">Todos los días<br>10:30 – 22:15</span></div>
+  <div><small>Instagram</small><a class="v" href="https://www.instagram.com/lasrapichelas/" target="_blank" rel="noopener">@lasrapichelas</a></div>
+  <div style="border:0"><a class="btn r" href="https://www.rappi.com.mx/restaurantes/1930236478-rapichelas" target="_blank" rel="noopener">Pedir en Rappi</a></div>
+ </div>
+</section>
+<div class="big">las rapichelas</div>
+<footer><span>© 2026 Las Rapichelas · Puebla, México</span><span>Sitio de demostración — menú y precios vía Rappi</span></footer>
+
+<div class="demo">Propuesta de diseño para Las Rapichelas. No es el sitio oficial del negocio.</div>
+<a id="fab" class="btn fab r" href="https://www.google.com/maps/search/?api=1&query=Las+Rapichelas+Ruta+Quetzalc%C3%B3atl+206+San+Pedro+Cholula" target="_blank" rel="noopener">Google Maps</a>
+
+<div class="ord" id="ord" hidden><div class="sheet" role="dialog" aria-modal="true" aria-labelledby="ordt"><h3 id="ordt"></h3><p>Elige dónde pedir</p><a class="btn r" href="https://www.rappi.com.mx/restaurantes/1930236478-rapichelas" target="_blank" rel="noopener">Pedir en Rappi</a><a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=Las+Rapichelas+Ruta+Quetzalc%C3%B3atl+206+San+Pedro+Cholula" target="_blank" rel="noopener">Ir a la sucursal</a><button class="x" id="ordx" type="button">Cerrar</button></div></div>
+<script>
+const MENU=[
+{c:"Snacks",i:[["Orden de Boneless","8 piezas de pechuga de pollo sazonada con sal y pimienta, con aderezo ranch, zanahoria y apio.",95,"boneless"],["Orden de Alitas","14 piezas de alitas de pollo sazonadas con sal y pimienta, con aderezo ranch, zanahoria y apio.",189,"alitas"],["Papas Locas","Bote de 1 lt de papas fritas con mezcla de salsas, Maggi, inglesa, Valentina y jugo de limón.",68,"papaslocas"],["Papas a la Francesa","170 g de papas a la francesa con catsup y salsa picante.",68,"francesa"],["Tostada de Camarón","Tostada crujiente cubierta con camarones.",84,"tostada"]]},
+{c:"Rapichelas",i:[["Clásica","2 latones de cerveza a elegir, escarchado de mango con ajonjolí caramelizado, mezcla de limón y sal.",128,"clasica"],["Cubana","2 latones de cerveza a elegir, escarchado de chamoy de tamarindo con Tajín, sal, limón, salsa inglesa y Maggi.",134,"cubana"],["Clamachela","2 latones de cerveza a elegir, chamoy de tamarindo con miguelito, clamato con limón, inglesa, Maggi, Valentina, pepino y un tarugo.",148,"clamachela"],["Camarón Pepino","2 latones de cerveza a elegir, chamoy, miguelito, clamato, limón, salsas, 100 g de camarón y pepino.",155,"camaronpepino"],["Camaronera","2 latones de cerveza a elegir, chamoy con Tajín, clamato, limón y salsas. Arriba lleva tostitos, pepino y 120 g de camarón.",187,"camaronera"]]}
+];
+const tabs=document.getElementById('tabs'),grid=document.getElementById('grid');
+tabs.innerHTML=MENU.map((m,k)=>`<button class="${k?'':'on'}" data-c="${m.c}">${m.c}</button>`).join('');
+grid.innerHTML=MENU.flatMap(m=>m.i.map(x=>`<article class="card" data-c="${m.c}"><div class="im"><img loading="lazy" src="img/${x[3]}.webp" alt="${x[0]}"></div><div class="tx"><h3>${x[0]}</h3><p>${x[1]}</p><div class="price">$${x[2]}</div></div></article>`)).join('');
+function sel(c){tabs.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.c===c));grid.querySelectorAll('.card').forEach(k=>k.classList.toggle('hide',k.dataset.c!==c))}
+tabs.onclick=e=>{const b=e.target.closest('button');if(b)sel(b.dataset.c)};sel('Rapichelas');
+new IntersectionObserver(e=>document.getElementById('fab').classList.toggle('off',e[0].isIntersecting)).observe(document.getElementById('mapin'));
+(function(){const el=document.getElementById('st');function t(){let h=0,m=0;try{const p=new Intl.DateTimeFormat('en-GB',{timeZone:'America/Mexico_City',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());h=+p.find(x=>x.type==='hour').value%24;m=+p.find(x=>x.type==='minute').value}catch(e){const d=new Date();h=d.getHours();m=d.getMinutes()}
+const v=h*60+m,o=v>=630&&v<1335;el.classList.toggle('on',o);el.textContent=o?'Abierto':'Cerrado';el.setAttribute('aria-label',o?'Abierto ahora':'Cerrado ahora')}t();setInterval(t,60000)})();
+(function(){const o=document.getElementById('ord'),t=document.getElementById('ordt');
+function show(n){t.textContent=n;o.hidden=false}function hide(){o.hidden=true}
+grid.addEventListener('click',e=>{const im=e.target.closest('.im');if(im)show(im.closest('.card').querySelector('h3').textContent)});
+o.addEventListener('click',e=>{if(e.target===o||e.target.id==='ordx')hide()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')hide()});
+document.querySelectorAll('.stack img').forEach(im=>im.addEventListener('click',()=>document.getElementById('menu').scrollIntoView({behavior:'smooth'})));
+})();
+</script>
+</body></html>
