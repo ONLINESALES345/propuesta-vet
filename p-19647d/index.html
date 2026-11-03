@@ -4,62 +4,82 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex">
 <title>Animals, Inc.</title>
-<meta name="theme-color" content="#6b3fb5">
+<meta name="theme-color" content="#2c1a4d">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--blue:#6b3fb5;--navy:#2c1a4d;--ink:#111827;--mut:#5b6478;--line:#e4e8f2;--soft:#f4f0fb;--ok:#1f9d55;--bad:#d64545}
+:root{--acc:#6b3fb5;--deep:#2c1a4d;--tint:#f4f0fb;--bg:#f6f3ee;--card:#fff;--ink:#14171c;--mut:#686d76;--line:#e6e1d8;--cream:#f7f1e6;--ok:#2fb36d;--bad:#e2584d;--serif:Fraunces,Georgia,"Times New Roman",serif}
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.5;padding-bottom:84px;-webkit-text-size-adjust:100%}
+body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;padding-bottom:88px;-webkit-text-size-adjust:100%}
 a{color:inherit;text-decoration:none}
-.bar{background:var(--navy);color:#fff;font-size:13px;text-align:center;padding:9px 16px;font-weight:600}
-.bar b{color:#ffffff;white-space:nowrap}
-nav{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;position:sticky;top:0;background:#fffe;backdrop-filter:blur(8px);z-index:20;border-bottom:1px solid var(--line)}
-.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.02em}
-.cross{flex:none;width:34px;height:34px;border-radius:9px;background:var(--blue);position:relative}
-.cross:before,.cross:after{content:"";position:absolute;background:#fff;border-radius:2px}
-.cross:before{left:14px;top:7px;width:6px;height:20px}.cross:after{left:7px;top:14px;width:20px;height:6px}
-.logo small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:200px;display:block;font-weight:600;color:var(--mut);font-size:11px;letter-spacing:.04em;margin-top:-2px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;border-radius:999px;padding:13px 22px;font-size:16px;border:2px solid var(--blue)}
-.btn.p{background:var(--blue);color:#fff}
-.btn.s{background:#fff;color:var(--blue)}
-nav .btn{padding:9px 16px;font-size:14px}
-.hero{position:relative;color:#fff;background:linear-gradient(160deg,#2c1a4d,#6b3fb5);padding:46px 20px 40px}
-.pill{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--ink);font-size:13px;font-weight:700;border-radius:999px;padding:7px 14px}
-.dot{width:9px;height:9px;border-radius:50%;background:var(--bad)}
-.pill.open .dot{background:var(--ok)}
-h1{font-size:40px;line-height:1.05;letter-spacing:-.02em;margin:18px 0 12px;font-weight:800}
-.hero p{font-size:17px;max-width:30ch;color:#f0f3ff}
-.row{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
-.hero .btn.s{background:transparent;color:#fff;border-color:#fff}
-.hero .btn.p{background:#fff;color:var(--blue);border-color:#fff}
-.rate{display:flex;align-items:center;gap:10px;margin-top:26px;font-size:15px;color:#f0f3ff}
-.rate b{font-size:28px;color:#fff;letter-spacing:-.02em}
-.stars{color:#ffc933;letter-spacing:2px}
-section{padding:44px 20px}
-h2{font-size:28px;letter-spacing:-.02em;line-height:1.1;margin-bottom:8px}
-.sub{color:var(--mut);margin-bottom:22px}
-.grid{display:grid;gap:12px}
-.svc{display:flex;gap:14px;align-items:center;background:var(--soft);border-radius:16px;padding:16px 18px;font-weight:700}
-.svc i{flex:none;width:40px;height:40px;border-radius:12px;background:var(--blue);display:grid;place-items:center;color:#fff;font-style:normal;font-size:18px}
-.rev{border:1px solid var(--line);border-radius:18px;padding:18px}
-.rev p{font-size:16px;margin:6px 0 8px}
-.rev .src{color:var(--mut);font-size:13px}
+.bar{background:var(--deep);color:#ffffffd9;font-size:12.5px;text-align:center;padding:9px 16px;font-weight:500;letter-spacing:.01em}
+.bar b{color:#fff;white-space:nowrap;font-weight:700}
+nav{display:flex;align-items:center;justify-content:space-between;padding:11px 18px;position:sticky;top:0;background:#f6f3eef2;backdrop-filter:blur(10px);z-index:20;border-bottom:1px solid var(--line)}
+.logo{display:flex;align-items:center;gap:11px;min-width:0}
+.mono{flex:none;width:34px;height:34px;border-radius:50%;background:var(--deep);color:var(--cream);display:grid;place-items:center;font:600 16px var(--serif)}
+.logo span.t{display:block;min-width:0;font:600 17px/1.1 var(--serif);letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.logo small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font:500 11px Inter,sans-serif;color:var(--mut);margin-top:3px;max-width:190px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:600;border-radius:999px;padding:14px 24px;font-size:15.5px;border:1.5px solid var(--acc);letter-spacing:.005em;transition:transform .15s}
+.btn:active{transform:scale(.97)}
+.btn.p{background:var(--acc);color:#fff;border-color:var(--acc)}
+.btn.s{background:transparent;color:var(--deep);border-color:#14171c26}
+nav .btn{padding:9px 18px;font-size:14px;background:var(--deep);border-color:var(--deep);color:var(--cream)}
+.hero{position:relative;color:#fff;background:radial-gradient(130% 70% at 100% 0%,#ffffff22,transparent 58%),radial-gradient(90% 60% at 0% 100%,#6b3fb555,transparent 60%),#2c1a4d;padding:44px 22px 40px;overflow:hidden}
+.pill{display:inline-flex;align-items:center;gap:8px;background:#ffffff1f;border:1px solid #ffffff33;backdrop-filter:blur(6px);color:#fff;font-size:12.5px;font-weight:600;border-radius:999px;padding:7px 14px;letter-spacing:.01em}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--bad);box-shadow:0 0 0 3px #e2584d33}
+.pill.open .dot{background:var(--ok);box-shadow:0 0 0 3px #2fb36d40}
+h1{font:500 40px/1.04 var(--serif);letter-spacing:-.025em;margin:22px 0 14px}
+.hero p{font-size:16.5px;max-width:31ch;color:#ffffffcc}
+.row{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.hero .btn.s{background:transparent;color:#fff;border-color:#ffffff59}
+.hero .btn.p{background:var(--cream);color:var(--deep);border-color:var(--cream)}
+.rate{display:flex;align-items:center;gap:14px;margin-top:30px;padding-top:22px;border-top:1px solid #ffffff26;font-size:13.5px;color:#ffffffbb;line-height:1.35}
+.rate b{font:500 38px/1 var(--serif);color:#fff;letter-spacing:-.02em}
+.stars{color:#ffc933;letter-spacing:2px;font-size:13px}
+section{padding:46px 22px}
+.eyebrow{font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:12px}
+h2{font:500 30px/1.08 var(--serif);letter-spacing:-.02em;margin-bottom:8px}
+.sub{color:var(--mut);margin-bottom:24px;font-size:15.5px}
+.acc{border-top:1px solid var(--line)}
+.svc{border-bottom:1px solid var(--line)}
+.svh{all:unset;box-sizing:border-box;width:100%;display:flex;align-items:center;gap:16px;padding:20px 2px;cursor:pointer}
+.svh .n{flex:none;font:500 13px var(--serif);color:var(--acc);letter-spacing:.06em;width:22px}
+.svh .tt{flex:1;font:500 19px/1.25 var(--serif);letter-spacing:-.01em}
+.svh .pl{flex:none;width:30px;height:30px;border-radius:50%;border:1.5px solid var(--line);position:relative;transition:.25s}
+.svh .pl:before,.svh .pl:after{content:"";position:absolute;left:50%;top:50%;width:11px;height:1.5px;background:var(--ink);transform:translate(-50%,-50%);transition:.25s}
+.svh .pl:after{transform:translate(-50%,-50%) rotate(90deg)}
+.svc.open .pl{background:var(--acc);border-color:var(--acc)}
+.svc.open .pl:before,.svc.open .pl:after{background:#fff}
+.svc.open .pl:after{transform:translate(-50%,-50%) rotate(0)}
+.svb{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}
+.svc.open .svb{grid-template-rows:1fr}
+.svb>div{overflow:hidden}
+.svb p{color:var(--mut);font-size:15.5px;padding:0 2px 12px 38px}
+.svb a{display:inline-block;margin:0 0 20px 38px;font-weight:600;font-size:14.5px;color:var(--acc);border-bottom:1.5px solid currentColor;padding-bottom:1px}
+.revs{display:grid;gap:14px}
+.rev{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px 22px 18px;position:relative}
+.rev:before{content:"“";position:absolute;right:20px;top:2px;font:500 64px/1 var(--serif);color:var(--acc);opacity:.22}
+.rev p{font:500 18px/1.4 var(--serif);margin:8px 0 12px;letter-spacing:-.005em;padding-right:26px}
+.rev .src{color:var(--mut);font-size:12.5px}
 .hours{width:100%;border-collapse:collapse}
-.hours td{padding:12px 0;border-bottom:1px solid var(--line);font-size:16px}
-.hours td:last-child{text-align:right;font-weight:700}
-.hours tr.today td{color:var(--blue)}
-.map{background:var(--navy);color:#fff;border-radius:22px;padding:24px 20px}
-.map p{color:#e6ebff;margin:6px 0 18px}
-.map .btn{background:#fff;color:var(--blue);border-color:#fff}
-.note{font-size:12px;color:var(--mut);text-align:center;padding:22px 20px 8px}
-footer{background:var(--navy);color:#e6ebff;font-size:13px;text-align:center;padding:20px 20px}
-.fab{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:#fffef;background:#ffffffee;backdrop-filter:blur(8px);border-top:1px solid var(--line);display:flex;gap:10px}
-.fab .btn{flex:1;padding:14px 10px}
+.hours td{padding:15px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+.hours td:last-child{text-align:right;font-weight:600}
+.hours tr.today td{color:var(--acc)}
+.map{background:var(--deep);color:#fff;border-radius:28px;padding:28px 24px;background-image:radial-gradient(100% 90% at 100% 0%,#ffffff1c,transparent 60%)}
+.map h2{color:#fff}
+.map p{color:#ffffffc7;margin:6px 0 20px}
+.map .btn{background:var(--cream);color:var(--deep);border-color:var(--cream)}
+.note{font-size:11.5px;color:var(--mut);text-align:center;padding:22px 24px 10px;line-height:1.5}
+footer{color:var(--mut);font-size:12.5px;text-align:center;padding:10px 20px 26px}
+.fab{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:30;padding:8px;background:#fffffff0;backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:999px;box-shadow:0 10px 30px #14171c22;display:flex;gap:8px}
+.fab .btn{flex:1;padding:13px 10px}
+.fab .btn.s{color:var(--deep)}
 </style>
 </head>
 <body>
 <div class="bar" id="bar">Animals, Inc. · <b>222 190 4890</b></div>
-<nav><a class="logo" href="#top"><span class="cross"></span><span>Animals, Inc.<small>Por 59 Oriente, Edif. A-1-3, Plaza de la Arcada, Infonavit La Margarita, Puebla</small></span></a><a class="btn p" href="tel:2221904890">Llamar</a></nav>
+<nav><a class="logo" href="#top"><span class="mono">A</span><span style="min-width:0"><span class="t">Animals, Inc.</span><small>Por 59 Oriente, Edif. A-1-3, Plaza de la Arcada, Infonavit La Margarita, Puebla</small></span></a><a class="btn p" href="tel:2221904890">Llamar</a></nav>
 <header class="hero" id="top">
   <span class="pill" id="st"><span class="dot"></span><span id="stt">Horario</span></span>
   <h1>Animals, Inc. Veterinaria</h1>
@@ -67,20 +87,20 @@ footer{background:var(--navy);color:#e6ebff;font-size:13px;text-align:center;pad
   <div class="row"><a class="btn p" href="tel:2221904890">Llamar ahora</a><a class="btn s" href="https://www.google.com/maps/search/?api=1&amp;query=Animals+Inc+Veterinaria+Por+59+Oriente+Infonavit+La+Margarita+Puebla" target="_blank" rel="noopener">Cómo llegar</a></div>
   <div class="rate"><b>4.8</b><span><span class="stars">★★★★★</span><br>137 reseñas en Google</span></div>
 </header>
-<section><h2>Qué hacemos por tu mascota</h2><p class="sub">Atención para perros y gatos.</p>
-  <div class="grid"><div class="svc"><i>+</i>Consulta y vacunación</div><div class="svc"><i>+</i>Cirugía</div><div class="svc"><i>+</i>Radiografías veterinarias</div><div class="svc"><i>+</i>Hospitalización</div><div class="svc"><i>+</i>Estética canina y felina</div><div class="svc"><i>+</i>Pensión</div></div>
-  <div class="row"><a class="btn p" href="tel:2221904890">Agendar por teléfono</a></div>
+<section><div class="eyebrow">Servicios</div><h2>Qué hacemos por tu mascota</h2><p class="sub">Atención para perros y gatos.</p>
+  <div class="acc"><div class="svc"><button class="svh" aria-expanded="false"><span class="n">01</span><span class="tt">Consulta y vacunación</span><span class="pl"></span></button><div class="svb"><div><p>Revisión general y esquema de vacunas.</p><a href="tel:2221904890">Preguntar por teléfono</a></div></div></div><div class="svc"><button class="svh" aria-expanded="false"><span class="n">02</span><span class="tt">Cirugía</span><span class="pl"></span></button><div class="svb"><div><p>Procedimientos quirúrgicos con seguimiento.</p><a href="tel:2221904890">Preguntar por teléfono</a></div></div></div><div class="svc"><button class="svh" aria-expanded="false"><span class="n">03</span><span class="tt">Radiografías veterinarias</span><span class="pl"></span></button><div class="svb"><div><p>Estudio de huesos y órganos con imagen.</p><a href="tel:2221904890">Preguntar por teléfono</a></div></div></div><div class="svc"><button class="svh" aria-expanded="false"><span class="n">04</span><span class="tt">Hospitalización</span><span class="pl"></span></button><div class="svb"><div><p>Cuidado y vigilancia si tu mascota necesita quedarse internada.</p><a href="tel:2221904890">Preguntar por teléfono</a></div></div></div><div class="svc"><button class="svh" aria-expanded="false"><span class="n">05</span><span class="tt">Estética canina y felina</span><span class="pl"></span></button><div class="svb"><div><p>Baño y arreglo para perros y gatos.</p><a href="tel:2221904890">Preguntar por teléfono</a></div></div></div><div class="svc"><button class="svh" aria-expanded="false"><span class="n">06</span><span class="tt">Pensión</span><span class="pl"></span></button><div class="svb"><div><p>Hospedaje para tu mascota cuando tú no puedes cuidarla.</p><a href="tel:2221904890">Preguntar por teléfono</a></div></div></div></div>
 </section>
-<section style="background:var(--soft)"><h2>Lo que dicen sus dueños</h2><p class="sub">Reseñas de Google.</p>
-  <div class="grid"><div class="rev"><span class="stars">★★★★★</span><p>“Excelente, muy amables a la hora de atender, son muy atentos.”</p><span class="src">Reseña en Google</span></div><div class="rev"><span class="stars">★★★★★</span><p>“Atención de calidad, los veterinarios atienden bien.”</p><span class="src">Reseña en Google</span></div></div>
+<section style="padding-top:8px"><div class="eyebrow">Opiniones</div><h2>Lo que dicen sus clientes</h2><p class="sub">Reseñas reales de Google.</p>
+  <div class="revs"><div class="rev"><span class="stars">★★★★★</span><p>“Excelente, muy amables a la hora de atender, son muy atentos.”</p><span class="src">Reseña en Google</span></div><div class="rev"><span class="stars">★★★★★</span><p>“Atención de calidad, los veterinarios atienden bien.”</p><span class="src">Reseña en Google</span></div></div>
 </section>
-<section><h2>Horario</h2><p class="sub">Confirma por teléfono antes de venir.</p>
+<section><div class="eyebrow">Horario</div><h2>Cuándo atienden</h2><p class="sub">Confirma por teléfono antes de venir.</p>
   <table class="hours" id="hrs"><tr><td>Horario</td><td>Consultar por teléfono</td></tr></table>
 </section>
 <section style="padding-top:8px"><div class="map"><h2>Cómo llegar</h2><p>Por 59 Oriente, Edif. A-1-3, Plaza de la Arcada, Infonavit La Margarita, Puebla.</p><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Animals+Inc+Veterinaria+Por+59+Oriente+Infonavit+La+Margarita+Puebla" target="_blank" rel="noopener">Abrir en Google Maps</a></div></section>
 <p class="note">Propuesta de diseño para Animals, Inc.. No es el sitio oficial. Horarios tomados de Google, por confirmar.</p>
 <footer>Animals, Inc. Veterinaria · 222 190 4890</footer>
 <div class="fab"><a class="btn s" href="https://www.google.com/maps/search/?api=1&amp;query=Animals+Inc+Veterinaria+Por+59+Oriente+Infonavit+La+Margarita+Puebla" target="_blank" rel="noopener">Cómo llegar</a><a class="btn p" href="tel:2221904890">Llamar</a></div>
+<script>document.querySelectorAll('.svh').forEach(function(b){b.addEventListener('click',function(){var s=b.parentNode;s.classList.toggle('open');b.setAttribute('aria-expanded',s.classList.contains('open'))})});</script>
 <script>
 (function(){
  var H=[], HH={};H.forEach(function(x){HH[x[0]]=x[1]});
